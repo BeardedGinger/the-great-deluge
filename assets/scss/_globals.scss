@@ -1,0 +1,25 @@
+$mainColor: #0056a1;
+
+$background: #ffffff;
+$contentBackground: #ffffff;
+$textColor: #0056a1;
+$accentColor: #f35828;
+$darkBlue: #0a1e39;
+$lightBlue: lighten( $darkBlue, 75% );
+
+$linkColor: #0056a1;
+$linkHover: #f35828;
+
+$buttonColor: #f35828;
+$buttonHover: darken($buttonColor, 5%);
+
+$instagram: #9b6954;
+$facebook: #3b5998;
+$twitter: #00aced;
+$youtube: #bb0000;
+$pinterest: #cb2027;
+$googleplus: #dd4b39;
+
+$screenSmall: 768px;
+$screenMedium: 1200px;
+$screenLarge: 2000px;

@@ -48,3 +48,6 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
 add_theme_support( 'custom-background' );
+
+//* Add support for custom header
+add_theme_support( 'custom-header' );
