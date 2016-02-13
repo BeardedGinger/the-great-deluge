@@ -55,5 +55,20 @@ $header_args = array(
 );
 add_theme_support( 'custom-header', $header_args );
 
+//* Unregister secondary navigation menu
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+
+//* Remove the default widget areas
+unregister_sidebar( 'header-right' );
+unregister_sidebar( 'sidebar' );
+unregister_sidebar( 'sidebar-alt' );
+
+// Unregister other site layouts
+genesis_unregister_layout( 'content-sidebar' );
+genesis_unregister_layout( 'sidebar-content' );
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+
 // Customizer Options
 include_once( get_stylesheet_directory() . '/customizer/customizer.php' );

@@ -1,10 +1,18 @@
 <?php
 
-add_action( 'customize_register', 'gingerbeard_tgd_customizer_options' );
+add_action( 'customize_register', 'gingerbeard_tgd_customizer_options', 20 );
 function gingerbeard_tgd_customizer_options( $wp_customize ) {
 
 	/**
-	 * Social settings for The Great Deluge
+	 * Remove unneeded elements from the customizer
+	 *
+	 * @since 1.0.0
+	 */
+	$wp_customize->remove_section( 'genesis_layout' );
+	$wp_customize->remove_section( 'genesis_breadcrumbs' );
+
+	/**
+	 * General settings for The Great Deluge
 	 *
 	 * @since 1.0.0
 	 */
