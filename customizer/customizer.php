@@ -35,7 +35,7 @@ function gingerbeard_tgd_customizer_options( $wp_customize ) {
 
 		//* Facebook
 		$wp_customize->add_setting( 'tgd_facebook', array(
-			'capability' 	=> 'edit_theme_options',
+			'capability' 			=> 'edit_theme_options',
 			'sanitize_callback' 	=> 'tgd_sanitize_text'
 		) );
 
@@ -46,13 +46,25 @@ function gingerbeard_tgd_customizer_options( $wp_customize ) {
 
 		//* Twitter
 		$wp_customize->add_setting( 'tgd_twitter', array(
-			'capability' 	=> 'edit_theme_options',
+			'capability' 			=> 'edit_theme_options',
 			'sanitize_callback' 	=> 'tgd_sanitize_text'
 		) );
 
 		$wp_customize->add_control( 'tgd_twitter', array(
 			'section' 		=> 'tgd_settings',
 			'label' 		=> 'Twitter Link',
+		) );
+
+		//* Hero Text
+		$wp_customize->add_setting( 'tgd_hero', array(
+			'capability' 			=> 'edit_theme_options',
+			'type' 					=> 'option',
+			'sanitize_callback' 	=> 'tgd_sanitize_text'
+		) );
+
+		$wp_customize->add_control( 'tgd_hero', array(
+			'section' 		=> 'tgd_settings',
+			'label' 		=> 'Hero Text',
 		) );
 
 	/**
