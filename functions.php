@@ -51,7 +51,8 @@ add_theme_support( 'custom-background' );
 
 //* Add support for custom header
 $header_args = array(
-	'header-text' 	=> false
+	'header-text' 		=> false,
+	'header-selector' 	=> '.site-header .wrap'
 );
 add_theme_support( 'custom-header', $header_args );
 
