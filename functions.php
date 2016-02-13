@@ -50,4 +50,10 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'custom-background' );
 
 //* Add support for custom header
-add_theme_support( 'custom-header' );
+$header_args = array(
+	'header-text' 	=> false
+);
+add_theme_support( 'custom-header', $header_args );
+
+// Customizer Options
+include_once( get_stylesheet_directory() . '/customizer/customizer.php' );
