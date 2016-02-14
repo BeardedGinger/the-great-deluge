@@ -23,6 +23,7 @@ function gingerbeard_tgd_customizer_options( $wp_customize ) {
 
 		//* Launch Date
 		$wp_customize->add_setting( 'tgd_countdown', array(
+			'type' 			=> 'option',
 			'capability' 	=> 'edit_theme_options',
 		) );
 
@@ -31,28 +32,6 @@ function gingerbeard_tgd_customizer_options( $wp_customize ) {
 			'section' 		=> 'tgd_settings',
 			'label' 		=> 'Launch Date',
 			'description' 	=> 'Set the launch date for controlling the countdown'
-		) );
-
-		//* Facebook
-		$wp_customize->add_setting( 'tgd_facebook', array(
-			'capability' 			=> 'edit_theme_options',
-			'sanitize_callback' 	=> 'tgd_sanitize_text'
-		) );
-
-		$wp_customize->add_control( 'tgd_facebook', array(
-			'section' 		=> 'tgd_settings',
-			'label' 		=> 'Facebook Link',
-		) );
-
-		//* Twitter
-		$wp_customize->add_setting( 'tgd_twitter', array(
-			'capability' 			=> 'edit_theme_options',
-			'sanitize_callback' 	=> 'tgd_sanitize_text'
-		) );
-
-		$wp_customize->add_control( 'tgd_twitter', array(
-			'section' 		=> 'tgd_settings',
-			'label' 		=> 'Twitter Link',
 		) );
 
 		//* Hero Text

@@ -31,9 +31,25 @@ add_action( 'genesis_after_header', 'tgd_hero_section' );
  * @since 1.0.0
  */
 function tgd_hero_section() {
-	if( get_option( 'tgd_hero' ) ) {
-		echo '<h2>' . get_option( 'tgd_hero' ) . '</h2>';
-	}
+
+	$hero_text = get_option( 'tgd_hero' );
+	$countdown = get_option( 'tgd_countdown' );
+	?>
+
+	<section id="section-hero" class="hero">
+		<div class="wrap">
+			<?php
+				if( isset( $hero_text ) ) {
+					echo '<h2 class="hero-title">' . get_option( 'tgd_hero' ) . '</h2>';
+				}
+				if( isset( $countdown ) ) {
+					echo '<div id="countdown"></div>';
+				}
+			?>
+		</div>
+	</section>
+
+<?php
 }
 
 //* Run the Genesis loop

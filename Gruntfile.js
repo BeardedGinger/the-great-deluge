@@ -37,11 +37,12 @@ module.exports = function(grunt) {
 		       	files: {
 		            'js/plugins.min.js': [
 		             	'assets/js/scripts.js',
-						'assets/js/mobile-nav.js'
 			        ],
 
 			        'js/plugins.home.min.js': [
-			        	'js/plugins.min.js'
+			        	'js/plugins.min.js',
+			        	'assets/js/home/jquery.countdown.min.js',
+			        	'assets/js/home/home-scripts.js'
 			        ]
 				}
 			}

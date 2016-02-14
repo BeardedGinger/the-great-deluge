@@ -22,6 +22,8 @@ function enqueue_child_theme_scripts() {
 
 	if( WP_DEBUG ) {
 		wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ) );
+		wp_enqueue_script( 'countdown', get_stylesheet_directory_uri() . '/assets/js/home/jquery.countdown.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'home-scripts', get_stylesheet_directory_uri() . '/assets/js/home/home-scripts.js', array( 'jquery', 'countdown' ) );
 	} else {
 		if( is_front_page() ) {
 			wp_enqueue_script( 'home-scripts', get_stylesheet_directory_uri() . '/js/plugins.home.min.js', array( 'jquery' ), CHILD_THEME_VERSION );
@@ -29,6 +31,10 @@ function enqueue_child_theme_scripts() {
 			wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/plugins.min.js', array( 'jquery' ), CHILD_THEME_VERSION );
 		}
 	}
+
+	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE', array(
+		'launch' 	=> get_option( 'tgd_countdown' )
+	) );
 }
 
 add_action( 'admin_enqueue_scripts', 'enqueue_needed_fonts' );
