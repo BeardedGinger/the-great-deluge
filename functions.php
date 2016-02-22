@@ -43,7 +43,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_needed_fonts' );
  * Enqueue the needed fonts on the front-end as well as the back for editor style support
  */
 function enqueue_needed_fonts() {
-	wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Lato:300,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Open+Sans:300,700', array(), CHILD_THEME_VERSION );
 }
 
 //* Add HTML5 markup structure
