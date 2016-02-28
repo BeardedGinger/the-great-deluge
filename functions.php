@@ -22,7 +22,7 @@ function enqueue_child_theme_scripts() {
 
 	if( WP_DEBUG ) {
 		wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ) );
-		wp_enqueue_script( 'countdown', get_stylesheet_directory_uri() . '/assets/js/home/jquery.countdown.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'countdown', get_stylesheet_directory_uri() . '/assets/js/home/TimeCircles.js', array( 'jquery' ) );
 		wp_enqueue_script( 'home-scripts', get_stylesheet_directory_uri() . '/assets/js/home/home-scripts.js', array( 'jquery', 'countdown' ) );
 	} else {
 		if( is_front_page() ) {
@@ -33,7 +33,7 @@ function enqueue_child_theme_scripts() {
 	}
 
 	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE', array(
-		'launch' 	=> get_option( 'tgd_countdown' )
+		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) )
 	) );
 }
 
@@ -63,10 +63,9 @@ $header_args = array(
 add_theme_support( 'custom-header', $header_args );
 
 //* Unregister secondary navigation menu
-add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+add_theme_support( 'genesis-menus', array() );
 
 //* Remove the default widget areas
-unregister_sidebar( 'header-right' );
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 

@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 
 			        'js/plugins.home.min.js': [
 			        	'js/plugins.min.js',
-			        	'assets/js/home/jquery.countdown.min.js',
+			        	'assets/js/home/TimeCircles.js',
 			        	'assets/js/home/home-scripts.js'
 			        ]
 				}

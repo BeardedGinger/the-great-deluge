@@ -771,6 +771,16 @@ Site Header
 	width: 100%;
 }
 
+/* ## Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	margin: 40px 0;
+	text-align: right;
+	width: 800px;
+}
+
 /*
 Site Navigation
 ---------------------------------------------------------------------------------------------------- */
@@ -790,8 +800,12 @@ Site Navigation
 
 .genesis-nav-menu a {
 	border: none;
-	color: lighten( $textColor, 10% );
+	color: #a4a4a4;
 	display: block;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: .1em;
 	padding: 28px 24px;
 	padding: 2.8rem 2.4rem;
 	position: relative;
@@ -879,6 +893,21 @@ Site Navigation
 .genesis-nav-menu > .search {
 	padding: 14px 0 0;
 	padding: 1.4rem 0 0;
+}
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+.site-header .sub-menu {
+	border-top: 1px solid #eee;
+}
+
+.site-header .sub-menu .sub-menu {
+	margin-top: -56px;
+}
+
+.site-header .genesis-nav-menu li li {
+	margin-left: 0;
 }
 
 /* Primary Navigation
