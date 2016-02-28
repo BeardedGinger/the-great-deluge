@@ -1,5 +1,5 @@
 .hero {
-	background: linear-gradient(180deg, #9bb3a5, #5a9090);
+	background: linear-gradient(180deg, $lightBlue, $darkBlue);
 	background-size: 400% 400%;
 	padding: 100px 0 60px;
 	text-align: center;
@@ -20,13 +20,26 @@
 
 	.hero-title {
 		color: #fff;
-		font-size: 5.6rem;
-		font-size: 56px;
+		font-size: 6.8rem;
+		font-size: 68px;
+		line-height: 1.3em;
 		letter-spacing: .05em;
+		text-shadow: 4px 4px 0px $darkBlue;
 		text-transform: uppercase;
 	}
 }
 
-#countdown {
+.launch-heading {
+	color: #fff;
+	margin-top: 100px;
+	text-shadow: 3px 3px 0px $darkBlue;
+	text-transform: uppercase;
+}
 
+#countdown {
+	color: #fff;
+
+	h4 {
+		color: #222;
+	}
 }

@@ -42,8 +42,12 @@ function tgd_hero_section() {
 				if( isset( $hero_text ) ) {
 					echo '<h2 class="hero-title">' . get_option( 'tgd_hero' ) . '</h2>';
 				}
-				if( isset( $countdown ) ) {
-					echo '<div id="countdown"></div>';
+				if( isset( $countdown ) ) { ?>
+
+					<h3 class="launch-heading"><?php _e( 'Launching In:', 'the-great-deluge' ); ?></h3>
+					<div id="countdown"></div>
+
+				<?php
 				}
 			?>
 		</div>

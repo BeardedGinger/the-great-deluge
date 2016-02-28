@@ -27,13 +27,19 @@ function enqueue_child_theme_scripts() {
 	} else {
 		if( is_front_page() ) {
 			wp_enqueue_script( 'home-scripts', get_stylesheet_directory_uri() . '/js/plugins.home.min.js', array( 'jquery' ), CHILD_THEME_VERSION );
-		} else {
-			wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/plugins.min.js', array( 'jquery' ), CHILD_THEME_VERSION );
 		}
+			wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/plugins.min.js', array( 'jquery' ), CHILD_THEME_VERSION );
+
 	}
 
-	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE', array(
+	$posts_count = wp_count_posts()->publish;
+
+	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE_HOME', array(
 		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) )
+	) );
+
+	wp_localize_script( 'scripts', 'THE_GREAT_DELUGE_SCRIPTS', array(
+		'posts' 	=> $posts_count
 	) );
 }
 

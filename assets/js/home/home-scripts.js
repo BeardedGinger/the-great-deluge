@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 	var currentDate = Math.floor(Date.now()/1000);
-		launch = THE_GREAT_DELUGE.launch;
+		launch = THE_GREAT_DELUGE_HOME.launch;
 		timer = launch - currentDate;
 
 	$('#countdown').attr('data-timer', timer);

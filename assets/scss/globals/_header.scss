@@ -2,7 +2,30 @@
 	.wrap {
 		/* TODO: research custom-header options to set this or how to
 		 * change from using generic "background" when setting header image
+		 *
+		 * NOTE: Looks like WP 4.5 will have a new logo support. Redo to work with that
+		 * once available rather using custom-header
 		 */
 		background-position: left center!important;
+	}
+}
+
+.update-count {
+	position: relative!important;
+
+	.post-count {
+		background: $lightBlue;
+		color: #fff;
+		border-radius: 100%;
+		font-size: 10px;
+		font-weight: 700;
+		height: 25px;
+		line-height: 25px;
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		text-align: center;
+		text-shadow: 1px 1px 0px $darkBlue;
+		width: 25px
 	}
 }

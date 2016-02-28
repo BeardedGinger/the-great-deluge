@@ -1,16 +1,16 @@
-$mainColor: #0056a1;
+$mainColor: #a4a4a4;
 
 $background: #ffffff;
 $contentBackground: #ffffff;
-$textColor: #0056a1;
-$accentColor: #f35828;
-$darkBlue: #0a1e39;
-$lightBlue: lighten( $darkBlue, 75% );
+$textColor: #444;
+$accentColor: #d64b14;
+$lightBlue: #9bb3a5;
+$darkBlue: #5a9090;
 
-$linkColor: #0056a1;
-$linkHover: #f35828;
+$linkColor: #d64b14;
+$linkHover: darken($linkColor, 5%);
 
-$buttonColor: #f35828;
+$buttonColor: #d64b14;
 $buttonHover: darken($buttonColor, 5%);
 
 $instagram: #9b6954;
