@@ -71,6 +71,10 @@ add_theme_support( 'custom-header', $header_args );
 //* Unregister secondary navigation menu
 add_theme_support( 'genesis-menus', array() );
 
+//* Remove sidebars from templates
+remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+remove_action( 'genesis_sidebar_alt', 'genesis_do_sidebar_alt' );
+
 //* Remove the default widget areas
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
