@@ -6,14 +6,15 @@ jQuery(document).ready(function($){
 
 	$('#countdown').attr('data-timer', timer);
 
-	$('#countdown').TimeCircles({
-		animation: 'ticks',
-		bg_width: 0.1,
-		fg_width: 0.02,
-		time: {
-			Days: { show: true },
-			Hours: { show: true }
-		}
-	});
-
+	if(timer > 0) {
+		$('#countdown').TimeCircles({
+			animation: 'ticks',
+			bg_width: 1.2,
+			fg_width: 0.05,
+			time: {
+				Days: { show: true },
+				Hours: { show: true }
+			}
+		});
+	}
 });
