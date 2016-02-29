@@ -86,5 +86,17 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 
+// reposition entry meta
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+add_action( 'genesis_entry_header', 'genesis_post_info', 5 );
+
+// filter entry-meta. extra filter added to home.php for update loop
+add_filter( 'genesis_post_info', function() { return '[post_date] [post_author_posts_link] [post_comments] [post_edit]'; } );
+
+// archive and post layout changes
+remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
+remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
 // Customizer Options
 include_once( get_stylesheet_directory() . '/customizer/customizer.php' );

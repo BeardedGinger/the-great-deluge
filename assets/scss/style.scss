@@ -11,10 +11,12 @@
  * License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
+@import 'compass';
 @import 'globals';
 @import 'parent-styles';
 @import 'globals/header';
 @import 'globals/page';
 @import 'content/front-page';
+@import 'content/single';
 @import 'content/time-circles';
 @import 'content/updates';
