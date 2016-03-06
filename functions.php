@@ -35,7 +35,11 @@ function enqueue_child_theme_scripts() {
 	$posts_count = wp_count_posts()->publish;
 
 	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE_HOME', array(
-		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) )
+		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) ),
+		'day_color' 	=> get_option('tgd_day_color'),
+		'hour_color' 	=> get_option('tgd_hour_color'),
+		'minute_color' 	=> get_option('tgd_minute_color'),
+		'second_color' 	=> get_option('tgd_second_color'),
 	) );
 
 	wp_localize_script( 'scripts', 'THE_GREAT_DELUGE_SCRIPTS', array(
