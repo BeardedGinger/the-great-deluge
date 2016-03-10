@@ -32,8 +32,6 @@ function enqueue_child_theme_scripts() {
 
 	}
 
-	$posts_count = wp_count_posts()->publish;
-
 	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE_HOME', array(
 		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) ),
 		'day_color' 	=> get_option('tgd_day_color'),
@@ -41,6 +39,8 @@ function enqueue_child_theme_scripts() {
 		'minute_color' 	=> get_option('tgd_minute_color'),
 		'second_color' 	=> get_option('tgd_second_color'),
 	) );
+
+	$posts_count = wp_count_posts()->publish;
 
 	wp_localize_script( 'scripts', 'THE_GREAT_DELUGE_SCRIPTS', array(
 		'posts' 	=> $posts_count
@@ -101,6 +101,14 @@ add_filter( 'genesis_post_info', function() { return '[post_date] [post_author_p
 remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
 remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+
+//* Register after post widget area
+genesis_register_sidebar( array(
+	'id'            => 'home-cta',
+	'name'          => __( 'Home Call to Action', 'the-great-deluge' ),
+	'description'   => __( 'Widget area on the homepage below main banner', 'the-great-deluge' ),
+) );
 
 // Customizer Options
 include_once( get_stylesheet_directory() . '/customizer/customizer.php' );
