@@ -1,7 +1,7 @@
 .hero {
 	background: linear-gradient(180deg, $lightBlue, $darkBlue);
 	background-size: 400% 400%;
-	padding: 100px 0 60px;
+	padding: 100px 0;
 	text-align: center;
 
 	-webkit-animation: BackgroundAnimate 20s ease infinite;
@@ -41,5 +41,31 @@
 
 	h4 {
 		color: #222;
+	}
+}
+
+.home-widget-area {
+
+	.wrap {
+		background: #f5f5f5;
+		padding: 40px;
+	}
+
+	.enews-subbox {
+		float: left;
+		width: 35%;
+	}
+
+	#subbox2 {
+		margin-left: 2%;
+	}
+
+	input[type="email"] {
+		clear: both;
+		width: 72%;
+	}
+
+	#subbutton {
+		width: 15%;
 	}
 }
