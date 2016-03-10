@@ -26,7 +26,7 @@ remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 
 add_action( 'genesis_after_header', 'tgd_hero_section' );
 /**
- * Hero Text
+ * Hero Text & Countdown
  *
  * @since 1.0.0
  */
@@ -49,6 +49,28 @@ function tgd_hero_section() {
 
 				<?php
 				}
+			?>
+		</div>
+	</section>
+
+<?php
+}
+
+add_action( 'genesis_after_header', 'tgd_home_widget_area' );
+/**
+ * Home widget area. Used in demo for subscription form
+ *
+ * @since 1.0.0
+ */
+function tgd_home_widget_area() { ?>
+
+	<section id="section-widget" class="home-widget-area">
+		<div class="wrap">
+			<?php
+				genesis_widget_area( 'home-cta', array(
+					'before' 	=> '<div class="home-widgets">';
+					'after' 	=> '</div>';
+				) );
 			?>
 		</div>
 	</section>
