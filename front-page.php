@@ -68,8 +68,8 @@ function tgd_home_widget_area() { ?>
 		<div class="wrap">
 			<?php
 				genesis_widget_area( 'home-cta', array(
-					'before' 	=> '<div class="home-widgets">';
-					'after' 	=> '</div>';
+					'before' 	=> '<div class="home-widgets">',
+					'after' 	=> '</div>'
 				) );
 			?>
 		</div>
