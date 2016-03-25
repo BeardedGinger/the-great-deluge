@@ -74,6 +74,10 @@ body {
 	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 1.625;
+
+	&.home {
+		background: $contentBackground;
+	}
 }
 
 a,
@@ -567,8 +571,8 @@ img.alignright,
 }
 
 .widget-title {
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 24px;
+	font-size: 2.4rem;
 	margin-bottom: 24px;
 	margin-bottom: 2.4rem;
 	text-transform: uppercase;
@@ -699,6 +703,24 @@ Site Header
 
 .site-header {
 	background-color: $contentBackground;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 100;
+
+	&:after {
+		background: #fff;
+		content: '';
+		height: 125px;
+		position: absolute;
+		bottom: -45px;
+		transform: skewY(-3.5deg);
+		width: 100%;
+	}
+
+	.home & {
+		width: 50%;
+	}
 }
 
 .site-header .wrap {
@@ -715,7 +737,7 @@ Site Header
 	font-weight: 700;
 	padding: 16px 0;
 	padding: 1.6rem 0;
-	width: 320px;
+	width: 100%;
 }
 
 .header-image .title-area {
@@ -761,7 +783,7 @@ Site Header
 /* Logo, hide text */
 
 .header-image .site-header .wrap {
-	background: url(images/logo.png) no-repeat left;
+	background: url(images/logo.png) no-repeat center center;
 	padding: 0;
 }
 
@@ -769,16 +791,6 @@ Site Header
 	float: left;
 	min-height: 164px;
 	width: 100%;
-}
-
-/* ## Widget Area
---------------------------------------------- */
-
-.site-header .widget-area {
-	float: right;
-	margin: 40px 0;
-	text-align: right;
-	width: 800px;
 }
 
 /*
@@ -1150,8 +1162,8 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: $contentBackground;
-	color: #999;
+	background-color: $darkBlue;
+	color: #fff;
 	font-size: 14px;
 	font-size: 1.4rem;
 	padding: 40px 0;
@@ -1161,6 +1173,7 @@ Site Footer
 
 .site-footer a {
 	border-bottom: 1px solid #ddd;
+	color: #f5f5f5;
 }
 
 .site-footer p {
@@ -1178,6 +1191,21 @@ Media Queries
 	only screen and (min-device-pixel-ratio: 1.5) {
 
 
+}
+
+@media only screen and (max-width: 1289px) {
+
+	.hero {
+
+		.hero-title {
+			margin-left: 20px;
+			width: 75%;
+		}
+
+		.home-widgets {
+			width: 24%;
+		}
+	}
 }
 
 @media only screen and (max-width: 1139px) {

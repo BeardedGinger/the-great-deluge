@@ -1,8 +1,21 @@
-.single {
+.single,
+.page {
 
 	.site-inner {
 		border-left: 6px solid #eee;
-		margin-top: 20px;
+		margin-top: 140px;
+		padding: 0px;
+		position: relative;
+
+		&:before {
+			background: #fff;
+			content: '';
+			height: 125px;
+			position: absolute;
+			top: -45px;
+			transform: skewY(-3.5deg);
+			width: 100%;
+		}
 	}
 
 	.entry {

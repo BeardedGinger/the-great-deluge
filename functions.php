@@ -33,7 +33,7 @@ function enqueue_child_theme_scripts() {
 	}
 
 	wp_localize_script( 'home-scripts', 'THE_GREAT_DELUGE_HOME', array(
-		'launch' 	=> strtotime( get_option( 'tgd_countdown' ) ),
+		'launch' 	=> strtotime( get_option( 'tgd_countdown_timer' ) ),
 		'day_color' 	=> get_option('tgd_day_color'),
 		'hour_color' 	=> get_option('tgd_hour_color'),
 		'minute_color' 	=> get_option('tgd_minute_color'),
@@ -82,6 +82,7 @@ remove_action( 'genesis_sidebar_alt', 'genesis_do_sidebar_alt' );
 //* Remove the default widget areas
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
+unregister_sidebar( 'header-right' );
 
 // Unregister other site layouts
 genesis_unregister_layout( 'content-sidebar' );

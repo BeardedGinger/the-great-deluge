@@ -6,7 +6,9 @@
 		 * NOTE: Looks like WP 4.5 will have a new logo support. Redo to work with that
 		 * once available rather using custom-header
 		 */
-		background-position: left center!important;
+		background-position: center 40px!important;
+		position: relative;
+		z-index: 110;
 	}
 }
 
