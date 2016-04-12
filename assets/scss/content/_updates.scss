@@ -14,6 +14,11 @@
 			right: auto;
 			top: 0;
 			width: 6px;
+
+			@include respondTo(smallScreen) {
+				left: 0;
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -45,7 +50,7 @@
 			@include transition( border-color 1s, background-color 1s );
 
 			@include respondTo(smallScreen) {
-				left: -26px;
+				left: -13px;
 			}
 		}
 
@@ -68,6 +73,10 @@
 
 		&::before {
 			left: -26px;
+
+			@include respondTo(smallScreen) {
+				left: -13px;
+			}
 		}
 	}
 

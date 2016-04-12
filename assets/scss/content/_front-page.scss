@@ -11,6 +11,7 @@
 	width: 100%;
 
 	@include respondTo(mediumScreen) {
+		background: rgba(90,144,144,.5);
 		position: relative;
 	}
 
@@ -28,20 +29,27 @@
 		padding: 40px;
 		width: 50%;
 
-		@include respondTo(smallScreen) {
+		@include respondTo(mediumScreen) {
 			background: none!important;
+			float: left;
+			width: 100%;
 		}
 	}
 
 	.hero-left {
 		background: rgba(155,179,165,.5);
 		padding-top: 300px;
+
+		@include respondTo(mediumScreen) {
+			display: none;
+		}
 	}
 
 	.hero-right {
 		background: rgba(90,144,144,.5);
 
 		@include respondTo(smallScreen) {
+			float: left;
 			width: 100%;
 		}
 	}
@@ -62,13 +70,13 @@
 		@include respondTo(mediumScreen) {
 			margin: 100px 0 0 0;
 			padding: 0 20px;
+			position: relative;
 			text-align: center;
 			width: 100%;
 		}
 
 		@include respondTo(smallScreen) {
 			font-size: 48px;
-			position: relative;
 		}
 	}
 
@@ -81,25 +89,32 @@
 		width: 30%;
 
 		@include respondTo(mediumScreen) {
-			bottom: 0;
-			left: 50%;
-			margin-left: -250px;
-			right: auto;
-			width: 500px;
+			left: 0;
+			margin: 0;
+			position: relative;
+			width: 100%;
 		}
+	}
+
+	.enews-widget {
+		color: #fff;
+	}
+
+	.enews-subbox {
+		float: left;
+		width: 49%;
 
 		@include respondTo(smallScreen) {
 			width: 100%;
 		}
 	}
 
-	.enews-subbox {
-		float: left;
-		width: 49%;
-	}
-
 	#subbox2 {
 		margin-left: 2%;
+
+		@include respondTo(smallScreen) {
+			margin-left: 0;
+		}
 	}
 
 	input[type="email"] {
@@ -127,8 +142,12 @@
 
 .home-countdown-area {
 	background: #f5f5f5;
-	margin-top: 550px;
+	margin-top: 585px;
 	padding: 40px 0;
+
+	@include respondTo( mediumScreen ) {
+		display: none;
+	}
 
 	.wrap {
 		padding: 0px;
