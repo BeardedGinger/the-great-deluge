@@ -1204,12 +1204,11 @@ Media Queries
 
 @media only screen and (max-width: 1023px) {
 
-	body {
-		background-color: $contentBackground;
+	.site-inner {
+		width: 90%;
 	}
 
 	.content,
-	.site-inner,
 	.title-area,
 	.wrap {
 		width: 100%;
@@ -1227,18 +1226,6 @@ Media Queries
 	.site-inner {
 		padding-left: 5%;
 		padding-right: 5%;
-	}
-
-	.archive-description,
-	.author-box,
-	.comment-respond,
-	.entry,
-	.entry-comments,
-	.entry-footer .entry-meta,
-	.header-image .site-header .widget-area,
-	.sidebar .widget,
-	.site-header {
-		padding: 0;
 	}
 
 	.genesis-nav-menu li,
