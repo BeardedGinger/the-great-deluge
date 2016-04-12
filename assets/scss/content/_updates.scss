@@ -27,6 +27,11 @@
 		position: relative;
 		width: 49%;
 
+		@include respondTo(smallScreen) {
+			text-align: left;
+			width: 100%;
+		}
+
 		&::before {
 			background-color: $lightBlue;
 			border: 5px solid $darkBlue;
@@ -38,6 +43,10 @@
 			width: 20px;
 
 			@include transition( border-color 1s, background-color 1s );
+
+			@include respondTo(smallScreen) {
+				left: -26px;
+			}
 		}
 
 		&:hover {
@@ -52,6 +61,11 @@
 		float: right;
 		text-align: left;
 
+		@include respondTo(smallScreen) {
+			float: left;
+			text-align: left;
+		}
+
 		&::before {
 			left: -26px;
 		}
@@ -60,6 +74,11 @@
 	.entry:nth-child(odd) {
 		float: left;
 		text-align: right;
+
+		@include respondTo(smallScreen) {
+			float: left;
+			text-align: left;
+		}
 	}
 
 	.entry-meta {

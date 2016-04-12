@@ -720,6 +720,10 @@ Site Header
 
 	.home & {
 		width: 50%;
+
+		@include respondTo(mediumScreen) {
+			width: 100%;
+		}
 	}
 }
 
@@ -1191,21 +1195,6 @@ Media Queries
 	only screen and (min-device-pixel-ratio: 1.5) {
 
 
-}
-
-@media only screen and (max-width: 1289px) {
-
-	.hero {
-
-		.hero-title {
-			margin-left: 20px;
-			width: 75%;
-		}
-
-		.home-widgets {
-			width: 24%;
-		}
-	}
 }
 
 @media only screen and (max-width: 1139px) {
