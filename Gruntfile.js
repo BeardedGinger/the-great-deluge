@@ -46,11 +46,30 @@ module.exports = function(grunt) {
 			        ]
 				}
 			}
+		},
+
+		'sftp-deploy': {
+			build: {
+				auth: {
+					host: '45.79.98.241',
+					port: 2222,
+					authKey: 'production'
+				},
+			cache: 'sftpcache.json',
+			src: '/Users/joshmallard/Documents/dev/vagrant-local/www/gingerbeard/htdocs/wp-content/themes/the-great-deluge',
+			dest: 'wp-content/themes/the-great-deluge',
+			exclusions: ['.ftppass', '.git', '.gitignore', 'node_modules', '.sass-cache', 'npm-debug.log', '.DS_Store', '.sftpcache.json'],
+			serverSep: '/',
+			concurrency: 4,
+			progress: true
+			}
 		}
 
 	});
 
     // register task
     grunt.registerTask('default', ['watch']);
+
+    grunt.registerTask( 'deploy', ['sftp-deploy']);
 
 };

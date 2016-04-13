@@ -113,3 +113,19 @@ genesis_register_sidebar( array(
 
 // Customizer Options
 include_once( get_stylesheet_directory() . '/customizer/customizer.php' );
+
+add_filter( 'genesis_footer_creds_text', 'tgd_footer_creds_text' );
+/**
+ * Filter the default credits to include LimeCuda branding and info.
+ *
+ * @since 1.0.0
+ */
+function tgd_footer_creds_text() {
+	echo '<div class="creds">';
+	echo '<p>Grown, Trimmed and Oiled in Macon, GA</p><br>';
+	echo '<p>&copy; ';
+	echo date('Y');
+	echo ' <a href="http://gingercult.com">Cult of the Ginger Beard</a>  &middot; ';
+	echo '<a href="http://gingercult.com">The Great Deluge Theme</a> by <a href="http://gingercult.com">Cult of the Ginger Beard</a>';
+	echo '</p></div>';
+}
